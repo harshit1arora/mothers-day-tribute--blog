@@ -4,6 +4,7 @@ import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
 import {useRouter} from 'next/navigation';
 import {useEffect, useState} from 'react';
+import React from 'react';
 
 interface Article {
   id: string;
