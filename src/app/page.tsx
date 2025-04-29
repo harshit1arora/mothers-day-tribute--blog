@@ -132,7 +132,7 @@ export default function Home() {
                 className={cn(
                   "bg-white hover:bg-indigo-50 text-gray-700 border-indigo-300",
                   filteredArticles.length > 0 &&
-                    filteredArticles[0].category === category
+                    (category === 'All' ? true : filteredArticles.some(article => article.category === category))
                     ? "bg-indigo-100 border-indigo-500"
                     : ""
                 )}

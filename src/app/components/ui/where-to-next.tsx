@@ -21,7 +21,7 @@ const destinations = [
   },
 ];
 
-export const WhereToNext = () => {
+const WhereToNext = () => {
   const router = useRouter();
   return (
     <div className="mb-4">
@@ -45,3 +45,5 @@ export const WhereToNext = () => {
     </div>
   );
 };
+
+export default WhereToNext;

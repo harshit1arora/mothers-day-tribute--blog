@@ -1,3 +1,5 @@
+'use client';
+
 import {
   Sidebar,
   SidebarContent,
@@ -55,7 +57,7 @@ const HomeLayout: React.FC<HomeLayoutProps> = ({articles, children}) => {
         </SidebarHeader>
         <SidebarContent>
           <SidebarGroup>
-            <AuthorProfile />
+            <AuthorProfile authorName="Harshit Arora" title="Passionate about sharing tribute stories." imageUrl="https://picsum.photos/50/50"/>
           </SidebarGroup>
           <SidebarSeparator/>
           <SidebarGroup>
