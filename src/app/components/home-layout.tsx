@@ -15,7 +15,7 @@ import {
   SidebarTrigger,
 } from '@/components/ui/sidebar';
 import AuthorProfile from '@/components/ui/author-profile';
-import Destinations from '@/components/ui/destinations';
+import {WhereToNext} from '@/components/ui/where-to-next';
 import SearchBar from '@/components/ui/search-bar';
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
@@ -38,11 +38,6 @@ interface HomeLayoutProps {
 }
 
 const HomeLayout: React.FC<HomeLayoutProps> = ({articles, children}) => {
-  const [searchResults, setSearchResults] = useState<Article[]>(articles);
-
-  const handleSearch = (results: Article[]) => {
-    setSearchResults(results);
-  };
 
   return (
     <SidebarProvider>
@@ -56,15 +51,15 @@ const HomeLayout: React.FC<HomeLayoutProps> = ({articles, children}) => {
       </SidebarInset>
       <Sidebar>
         <SidebarHeader>
-          <SearchBar articles={articles} onSearch={handleSearch}/>
+          <SearchBar articles={articles} onSearch={() => {}}/>
         </SidebarHeader>
         <SidebarContent>
           <SidebarGroup>
-            <AuthorProfile/>
+            <AuthorProfile />
           </SidebarGroup>
           <SidebarSeparator/>
           <SidebarGroup>
-            <Destinations/>
+            <WhereToNext />
           </SidebarGroup>
         </SidebarContent>
         <SidebarFooter>
@@ -76,3 +71,4 @@ const HomeLayout: React.FC<HomeLayoutProps> = ({articles, children}) => {
 };
 
 export default HomeLayout;
+

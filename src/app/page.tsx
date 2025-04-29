@@ -20,7 +20,7 @@ interface Article {
   imageUrl: string;
 }
 
-const categories = ['Stories', 'Health', 'Inspiration'];
+const categories = ['All', 'Stories', 'Health', 'Inspiration'];
 
 export default function Home() {
   const [articles, setArticles] = useState<Article[]>([]);
@@ -123,12 +123,20 @@ export default function Home() {
         {/* Explore by Category Section */}
         <section className="mb-16">
           <h2 className="text-2xl font-semibold mb-4 text-gray-800">Explore by Category</h2>
-          <div className="flex space-x-4 overflow-x-auto">
-            <Button variant="outline" onClick={() => handleCategoryClick('All')} className="bg-white hover:bg-indigo-50 text-gray-700 border-indigo-300">
-              All
-            </Button>
+          <div className="flex flex-wrap gap-4">
             {categories.map((category) => (
-              <Button key={category} variant="outline" onClick={() => handleCategoryClick(category)} className="bg-white hover:bg-indigo-50 text-gray-700 border-indigo-300">
+              <Button
+                key={category}
+                variant="outline"
+                onClick={() => handleCategoryClick(category)}
+                className={cn(
+                  "bg-white hover:bg-indigo-50 text-gray-700 border-indigo-300",
+                  filteredArticles.length > 0 &&
+                    filteredArticles[0].category === category
+                    ? "bg-indigo-100 border-indigo-500"
+                    : ""
+                )}
+              >
                 {category}
               </Button>
             ))}
