@@ -17,8 +17,8 @@ import {useRouter} from 'next/navigation';
 export default function ContactPage() {
   const router = useRouter();
   return (
-    <div className="flex justify-center items-start min-h-screen bg-gradient-to-br from-purple-200 to-pink-100 py-12">
-      <Card className="w-9/12 shadow-xl rounded-2xl overflow-hidden">
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-purple-200 to-pink-100">
+      <Card className="w-full max-w-2xl shadow-xl rounded-2xl overflow-hidden">
         <CardHeader className="p-6">
           <CardTitle className="text-3xl font-bold text-gray-900 mb-2">
             Contact Us
@@ -46,14 +46,14 @@ export default function ContactPage() {
             </div>
           </form>
         </CardContent>
-        <CardFooter className="p-6">
+        <CardFooter className="p-6 flex justify-between items-center">
           <Button className="bg-indigo-500 text-white hover:bg-indigo-600 transition-colors duration-300">
             Send Message
           </Button>
           <Button
             onClick={() => router.back()}
             variant="ghost"
-            className="ml-4 text-gray-600 hover:text-gray-800 transition-colors duration-300"
+            className="text-gray-600 hover:text-gray-800 transition-colors duration-300"
           >
             Go Back
           </Button>
