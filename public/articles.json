@@ -2,70 +2,101 @@
 [
   {
     "id": "1",
-    "title": "The Heartfelt Gift of Motherhood",
-    "excerpt": "Explore the profound joys and challenges that come with being a mother, a journey filled with unconditional love.",
-    "fullContent": "Motherhood is a transformative experience, reshaping one's life with the arrival of a child. The early days are filled with sleepless nights, but also with unforgettable moments of tenderness. As children grow, mothers become their pillars of strength, guiding them through life's ups and downs. The bond between a mother and child is a powerful force, one that withstands time and distance.",
-    "authorName": "Eleanor Vance",
-    "submissionDate": "2024-05-11",
+    "title": "The Enduring Bond of Motherhood",
+    "excerpt": "Explore the irreplaceable connection between a mother and her child, a bond that shapes lives and spans generations.",
+    "fullContent": "The bond between a mother and child is a tapestry woven with threads of love, sacrifice, and unwavering support. From the first tender moments to the milestones of adulthood, a mother's influence is a constant source of strength and guidance. This connection is not just biological; it's an emotional and spiritual link that enriches both lives immeasurably.",
+    "authorName": "Aisha Kapoor",
+    "submissionDate": "2024-05-12",
     "category": "Stories",
-    "readingTime": 6,
-    "imageUrl": "https://picsum.photos/id/16/800/450"
+    "readingTime": 7,
+    "imageUrl": "https://picsum.photos/id/22/800/450"
   },
   {
     "id": "2",
-    "title": "Nourishing Your Body: A Mother's Guide",
-    "excerpt": "Essential nutrition tips for mothers, focusing on foods that boost energy and support overall well-being.",
-    "fullContent": "Maintaining good health is crucial for mothers who are constantly on the go. A balanced diet rich in fruits, vegetables, and lean proteins can provide the necessary energy to tackle daily tasks. Hydration is also key, and mothers should aim to drink plenty of water throughout the day. Simple exercises, like stretching or walking, can further enhance physical and mental health.",
-    "authorName": "Dr. Chloe Thompson",
-    "submissionDate": "2024-05-10",
+    "title": "Healthy Habits for Busy Moms",
+    "excerpt": "Practical health tips for mothers juggling multiple responsibilities, focusing on quick and effective wellness strategies.",
+    "fullContent": "In the hustle of daily life, mothers often neglect their own well-being. However, prioritizing health is essential for sustaining energy and maintaining balance. Simple habits like meal prepping, short bursts of exercise, and mindful meditation can make a significant difference. Remember, a healthy mom is better equipped to care for her family.",
+    "authorName": "Dr. Kenji Tanaka",
+    "submissionDate": "2024-05-11",
     "category": "Health",
-    "readingTime": 8,
-    "imageUrl": "https://picsum.photos/id/17/800/450"
+    "readingTime": 6,
+    "imageUrl": "https://picsum.photos/id/23/800/450"
   },
   {
     "id": "3",
-    "title": "Words of Wisdom for Every Mom",
-    "excerpt": "Inspirational quotes to uplift and motivate mothers, reminding them of their incredible strength and resilience.",
-    "fullContent": "\"The influence of a mother in the lives of her children is beyond calculation.\" — James E. Faust. This quote encapsulates the profound impact mothers have on their children. Other empowering quotes include, \"A mother is she who can take the place of all others, but whose place no one else can take.\" Embrace your strength, mothers; you are indispensable.",
-    "authorName": "Olivia Mitchell",
-    "submissionDate": "2024-05-09",
+    "title": "Inspirational Mothers Who Changed the World",
+    "excerpt": "Profiles of remarkable mothers who defied expectations and left a lasting impact on society, inspiring generations to come.",
+    "fullContent": "Throughout history, countless mothers have risen above personal challenges to make a difference in the world. From activists to artists, these inspirational figures demonstrate the power of maternal love combined with unwavering determination. Their stories serve as a reminder that mothers are capable of extraordinary achievements.",
+    "authorName": "Elena Rodriguez",
+    "submissionDate": "2024-05-10",
     "category": "Inspiration",
-    "readingTime": 4,
-    "imageUrl": "https://picsum.photos/id/18/800/450"
+    "readingTime": 8,
+    "imageUrl": "https://picsum.photos/id/24/800/450"
   },
   {
     "id": "4",
-    "title": "The Silent Language of Mothers",
-    "excerpt": "An exploration into the intuitive connections and unspoken understandings shared between mothers and their children.",
-    "fullContent": "Mothers often possess an innate ability to understand their children without words. This silent language is built on years of shared experiences and deep emotional connections. From knowing when a child is unwell to sensing their emotional needs, mothers often act as their children's most trusted confidantes. This intuitive bond is a testament to the unique relationship between a mother and child.",
-    "authorName": "Isabella Hayes",
-    "submissionDate": "2024-05-08",
+    "title": "The Unseen Sacrifices of Motherhood",
+    "excerpt": "A tribute to the silent sacrifices mothers make every day, often without recognition, to ensure their children's happiness and well-being.",
+    "fullContent": "Motherhood is a journey marked by countless unseen sacrifices. From sleepless nights to putting their children's needs before their own, mothers consistently prioritize their families' well-being. These acts of selflessness often go unnoticed, but they form the bedrock of a child's upbringing and development.",
+    "authorName": "David O'Connell",
+    "submissionDate": "2024-05-09",
     "category": "Stories",
-    "readingTime": 7,
-    "imageUrl": "https://picsum.photos/id/19/800/450"
+    "readingTime": 5,
+    "imageUrl": "https://picsum.photos/id/25/800/450"
   },
   {
     "id": "5",
-    "title": "Self-Care Strategies for Overwhelmed Moms",
-    "excerpt": "Practical tips for mothers to prioritize self-care amidst the demands of motherhood, enhancing both their health and happiness.",
-    "fullContent": "In the whirlwind of motherhood, self-care often takes a backseat. However, prioritizing your well-being is essential for maintaining balance and preventing burnout. Simple self-care strategies include setting aside time for relaxation, pursuing hobbies, and seeking support from loved ones. Remember, taking care of yourself enables you to better care for your family.",
-    "authorName": "Sophia Bennett",
-    "submissionDate": "2024-05-07",
+    "title": "Mental Wellness for Modern Mothers",
+    "excerpt": "Strategies for maintaining mental health in the face of the unique challenges faced by mothers in today's fast-paced world.",
+    "fullContent": "Modern mothers face a unique set of pressures, balancing work, family, and personal aspirations. Prioritizing mental wellness is crucial for navigating these challenges. Practices such as setting boundaries, seeking support, and engaging in self-care activities can help mothers maintain a healthy mindset and emotional equilibrium.",
+    "authorName": "Mei Ling Chen",
+    "submissionDate": "2024-05-08",
     "category": "Health",
-    "readingTime": 9,
-    "imageUrl": "https://picsum.photos/id/20/800/450"
+    "readingTime": 7,
+    "imageUrl": "https://picsum.photos/id/26/800/450"
   },
   {
     "id": "6",
-    "title": "Celebrating Moms: A Global Tribute",
-    "excerpt": "A look at how different cultures around the world honor and celebrate mothers, highlighting the universal appreciation for motherhood.",
-    "fullContent": "Across the globe, mothers are celebrated in unique and meaningful ways. From Mother's Day in the United States to the Antroshtami festival in India, cultures worldwide recognize the invaluable contributions of mothers. These celebrations often involve gift-giving, family gatherings, and heartfelt expressions of gratitude. Despite cultural differences, the underlying sentiment remains the same: a deep appreciation for the love and sacrifices of mothers.",
-    "authorName": "Amelia Carter",
-    "submissionDate": "2024-05-06",
+    "title": "Celebrating Motherhood Across Cultures",
+    "excerpt": "A global perspective on how different cultures honor and celebrate mothers, highlighting the diverse traditions and customs worldwide.",
+    "fullContent": "The celebration of motherhood takes many forms around the world, reflecting diverse cultural values and traditions. From Mother's Day to traditional festivals, each culture has its own unique way of honoring mothers and expressing gratitude for their contributions. These celebrations underscore the universal importance of motherhood in shaping societies.",
+    "authorName": "Carlos Silva",
+    "submissionDate": "2024-05-07",
     "category": "Inspiration",
+    "readingTime": 6,
+    "imageUrl": "https://picsum.photos/id/27/800/450"
+  },
+  {
+    "id": "7",
+    "title": "Finding Joy in the Everyday Moments of Motherhood",
+    "excerpt": "Encouragement for mothers to appreciate the simple joys and small victories that make the journey of motherhood so rewarding.",
+    "fullContent": "In the midst of the daily grind, it's easy for mothers to overlook the small moments of joy that make motherhood so special. From a child's first steps to a heartfelt hug, these everyday moments are the true treasures of the journey. By savoring these experiences, mothers can find fulfillment and gratitude in their roles.",
+    "authorName": "Zara Khan",
+    "submissionDate": "2024-05-06",
+    "category": "Stories",
     "readingTime": 5,
-    "imageUrl": "https://picsum.photos/id/21/800/450"
+    "imageUrl": "https://picsum.photos/id/28/800/450"
+  },
+  {
+    "id": "8",
+    "title": "Nutrition for Breastfeeding Mothers",
+    "excerpt": "A guide to essential nutrients and dietary recommendations for mothers who are breastfeeding, ensuring optimal health for both mom and baby.",
+    "fullContent": "Breastfeeding mothers have unique nutritional needs to support milk production and maintain their own health. A balanced diet rich in protein, vitamins, and minerals is essential. This guide provides practical tips for ensuring that breastfeeding mothers get the nutrients they need to thrive.",
+    "authorName": "Dr. Emily Carter",
+    "submissionDate": "2024-05-05",
+    "category": "Health",
+    "readingTime": 7,
+    "imageUrl": "https://picsum.photos/id/29/800/450"
+  },
+  {
+    "id": "9",
+    "title": "The Power of a Mother's Intuition",
+    "excerpt": "An exploration of the remarkable intuitive abilities that many mothers possess, allowing them to connect with their children on a deeper level.",
+    "fullContent": "Many mothers possess a remarkable sense of intuition when it comes to their children. This innate ability allows them to sense their children's needs, understand their emotions, and provide comfort and support. The power of a mother's intuition is a testament to the unique connection between mother and child.",
+    "authorName": "Liam Murphy",
+    "submissionDate": "2024-05-04",
+    "category": "Inspiration",
+    "readingTime": 6,
+    "imageUrl": "https://picsum.photos/id/30/800/450"
   }
 ]
-
-    
