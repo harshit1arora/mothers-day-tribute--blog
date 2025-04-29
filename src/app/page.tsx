@@ -1,7 +1,7 @@
 'use client';
 
 import {useEffect, useState} from 'react';
-import {Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter} from '@/components/ui/card';
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
 import {cn} from '@/lib/utils';
 import {useRouter, useSearchParams} from 'next/navigation';
@@ -40,8 +40,6 @@ export default function Home() {
         }
         const data: Article[] = await response.json();
         setArticles(data);
-        setFilteredArticles(data); // Initialize filtered articles with all articles
-        setSearchResults(data);
       } catch (error) {
         console.error('Could not load articles:', error);
       }
@@ -49,6 +47,12 @@ export default function Home() {
 
     loadArticles();
   }, []);
+
+  useEffect(() => {
+    // Initialize filtered articles with all articles when articles are loaded
+    setFilteredArticles(articles);
+    setSearchResults(articles);
+  }, [articles]);
 
   // Hero Section Carousel Logic
   const featuredArticles = articles.slice(0, 3); // Take the first 3 articles as featured
@@ -93,7 +97,7 @@ export default function Home() {
     } else {
       filterArticlesByCategory('All');
     }
-  }, [searchParams, articles]);
+  }, [articles, searchParams]);
 
   const handleSearch = (results: Article[]) => {
     setSearchResults(results);
@@ -177,9 +181,7 @@ export default function Home() {
                 <CardContent className="p-4">
                   <p className="text-sm text-gray-700">{article.excerpt}</p>
                 </CardContent>
-                <CardFooter className="p-4">
-                  <Button onClick={() => navigateToStory(article.id)} className="bg-indigo-500 text-white hover:bg-indigo-600 transition-colors duration-300">Read More</Button>
-                </CardFooter>
+                <Button onClick={() => navigateToStory(article.id)} className="bg-indigo-500 text-white hover:bg-indigo-600 transition-colors duration-300">Read More</Button>
               </Card>
             ))}
           </div>
