@@ -1,0 +1,69 @@
+
+[
+  {
+    "id": "1",
+    "title": "A Mother's Unwavering Love",
+    "excerpt": "A heartwarming story about a mother's sacrifices and endless love for her children.",
+    "fullContent": "This is the full content of the article about a mother's unwavering love. It details specific instances where the mother showed her love and commitment to her family.",
+    "authorName": "Jane Doe",
+    "submissionDate": "2024-05-10",
+    "category": "Stories",
+    "readingTime": 5,
+    "imageUrl": "https://picsum.photos/id/10/800/450"
+  },
+  {
+    "id": "2",
+    "title": "Health Tips for Busy Moms",
+    "excerpt": "Practical health advice tailored for mothers juggling multiple responsibilities.",
+    "fullContent": "This article provides health tips for busy moms, including quick workout routines, healthy meal ideas, and stress management techniques.",
+    "authorName": "Dr. Alice Smith",
+    "submissionDate": "2024-05-09",
+    "category": "Health",
+    "readingTime": 7,
+    "imageUrl": "https://picsum.photos/id/11/800/450"
+  },
+  {
+    "id": "3",
+    "title": "Inspirational Quotes for Mothers",
+    "excerpt": "A collection of uplifting quotes to inspire and motivate mothers on their special day.",
+    "fullContent": "This article features a compilation of inspirational quotes that celebrate the strength, resilience, and love of mothers.",
+    "authorName": "Emily Johnson",
+    "submissionDate": "2024-05-08",
+    "category": "Inspiration",
+    "readingTime": 3,
+    "imageUrl": "https://picsum.photos/id/12/800/450"
+  },
+  {
+    "id": "4",
+    "title": "The Power of a Mother's Intuition",
+    "excerpt": "Exploring the unique bond and intuitive abilities mothers often possess.",
+    "fullContent": "This article delves into the phenomenon of mother's intuition, providing scientific explanations and anecdotal evidence of its power.",
+    "authorName": "Sarah Williams",
+    "submissionDate": "2024-05-07",
+    "category": "Stories",
+    "readingTime": 6,
+    "imageUrl": "https://picsum.photos/id/13/800/450"
+  },
+  {
+    "id": "5",
+    "title": "Balancing Work and Motherhood",
+    "excerpt": "Strategies and tips for achieving a healthy work-life balance as a working mother.",
+    "fullContent": "This article offers practical advice for working mothers on how to manage their time, set boundaries, and prioritize self-care.",
+    "authorName": "Laura Davis",
+    "submissionDate": "2024-05-06",
+    "category": "Health",
+    "readingTime": 8,
+    "imageUrl": "https://picsum.photos/id/14/800/450"
+  },
+  {
+    "id": "6",
+    "title": "Celebrating Motherhood Around the World",
+    "excerpt": "A global perspective on how different cultures celebrate and honor mothers.",
+    "fullContent": "This article provides insights into various cultural traditions and celebrations dedicated to mothers worldwide.",
+    "authorName": "Maria Rodriguez",
+    "submissionDate": "2024-05-05",
+    "category": "Inspiration",
+    "readingTime": 4,
+    "imageUrl": "https://picsum.photos/id/15/800/450"
+  }
+]
