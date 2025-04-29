@@ -10,9 +10,9 @@ import {
   SidebarTrigger,
   SidebarProvider,
 } from '@/components/ui/sidebar';
-import AuthorProfile from '@/components/ui/author-profile';
+import AuthorProfile from '@/app/components/ui/author-profile';
 import SearchBar from '@/components/ui/search-bar';
-import WhereToNext from '@/components/ui/where-to-next'; // Corrected import
+import WhereToNext from '@/app/components/ui/where-to-next'; // Corrected import
 import {Button} from '@/components/ui/button';
 
 interface Article {
@@ -65,3 +65,4 @@ const HomeLayout: React.FC<HomeLayoutProps> = ({articles, children}) => {
 };
 
 export default HomeLayout;
+

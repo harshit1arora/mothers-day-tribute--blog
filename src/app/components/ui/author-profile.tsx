@@ -1,4 +1,4 @@
-import {Avatar, AvatarFallback, AvatarImage} from './avatar';
+import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar';
 
 interface AuthorProfileProps {
   authorName: string;
@@ -13,7 +13,7 @@ const AuthorProfile: React.FC<AuthorProfileProps> = ({authorName, title, imageUr
       <div className="flex items-center space-x-2">
         <Avatar>
           <AvatarImage src={imageUrl} alt="Author Avatar"/>
-          <AvatarFallback>HA</AvatarFallback>
+          <AvatarFallback>{authorName.charAt(0).toUpperCase()}{authorName.charAt(1).toUpperCase()}</AvatarFallback>
         </Avatar>
         <div>
           <p className="text-sm font-medium">{authorName}</p>
@@ -27,3 +27,4 @@ const AuthorProfile: React.FC<AuthorProfileProps> = ({authorName, title, imageUr
 };
 
 export default AuthorProfile;
+
