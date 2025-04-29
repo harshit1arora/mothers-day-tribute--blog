@@ -1,4 +1,3 @@
-
 'use client';
 
 import {useEffect, useState} from 'react';
@@ -86,31 +85,31 @@ export default function Home() {
 
   return (
     <HomeLayout articles={articles}>
-      <div className="container mx-auto py-10">
+      <div className="container mx-auto py-10 bg-gradient-to-br from-purple-50 to-pink-50 min-h-screen">
         {/* Hero Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-semibold mb-4">Featured Tribute Stories</h2>
+          <h2 className="text-3xl font-semibold mb-4 text-gray-800">Featured Tribute Stories</h2>
           <div className="relative">
             {featuredArticles.length > 0 ? (
               <>
-                <Card className="w-full overflow-hidden">
+                <Card className="w-full overflow-hidden shadow-lg rounded-2xl transition-transform duration-300 hover:scale-105">
                   <img
                     src={featuredArticles[currentSlide].imageUrl}
                     alt={featuredArticles[currentSlide].title}
-                    className="w-full h-64 object-cover rounded-md"
+                    className="w-full h-64 object-cover rounded-t-2xl"
                   />
                   <CardContent className="p-6">
-                    <CardTitle>{featuredArticles[currentSlide].title}</CardTitle>
-                    <CardDescription>{featuredArticles[currentSlide].excerpt}</CardDescription>
+                    <CardTitle className="text-2xl font-bold text-gray-900">{featuredArticles[currentSlide].title}</CardTitle>
+                    <CardDescription className="text-gray-700">{featuredArticles[currentSlide].excerpt}</CardDescription>
                   </CardContent>
                 </Card>
                 <div className="absolute top-1/2 transform -translate-y-1/2 left-4">
-                  <Button variant="ghost" size="icon" onClick={prevSlide}>
+                  <Button variant="ghost" size="icon" onClick={prevSlide} className="hover:bg-indigo-100 text-gray-700">
                     <ChevronLeft className="h-6 w-6"/>
                   </Button>
                 </div>
                 <div className="absolute top-1/2 transform -translate-y-1/2 right-4">
-                  <Button variant="ghost" size="icon" onClick={nextSlide}>
+                  <Button variant="ghost" size="icon" onClick={nextSlide} className="hover:bg-indigo-100 text-gray-700">
                     <ChevronRight className="h-6 w-6"/>
                   </Button>
                 </div>
@@ -123,13 +122,13 @@ export default function Home() {
 
         {/* Explore by Category Section */}
         <section className="mb-16">
-          <h2 className="text-2xl font-semibold mb-4">Explore by Category</h2>
+          <h2 className="text-2xl font-semibold mb-4 text-gray-800">Explore by Category</h2>
           <div className="flex space-x-4 overflow-x-auto">
-            <Button variant="outline" onClick={() => handleCategoryClick('All')}>
+            <Button variant="outline" onClick={() => handleCategoryClick('All')} className="bg-white hover:bg-indigo-50 text-gray-700 border-indigo-300">
               All
             </Button>
             {categories.map((category) => (
-              <Button key={category} variant="outline" onClick={() => handleCategoryClick(category)}>
+              <Button key={category} variant="outline" onClick={() => handleCategoryClick(category)} className="bg-white hover:bg-indigo-50 text-gray-700 border-indigo-300">
                 {category}
               </Button>
             ))}
@@ -138,24 +137,24 @@ export default function Home() {
 
         {/* Recent Articles Section */}
         <section>
-          <h2 className="text-2xl font-semibold mb-4">Recent Articles</h2>
+          <h2 className="text-2xl font-semibold mb-4 text-gray-800">Recent Articles</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {searchResults.map((article) => (
-              <Card key={article.id} className="bg-secondary">
+              <Card key={article.id} className="bg-secondary shadow-md rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-105">
                 <img
                   src={article.imageUrl}
                   alt={article.title}
-                  className="w-full h-48 object-cover rounded-md"
+                  className="w-full h-48 object-cover rounded-t-2xl"
                 />
-                <CardHeader>
-                  <CardTitle>{article.title}</CardTitle>
-                  <CardDescription>{article.category} - {article.readingTime} min read</CardDescription>
+                <CardHeader className="p-4">
+                  <CardTitle className="text-xl font-semibold text-gray-900">{article.title}</CardTitle>
+                  <CardDescription className="text-indigo-600 font-semibold">{article.category} - {article.readingTime} min read</CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground">{article.excerpt}</p>
+                <CardContent className="p-4">
+                  <p className="text-sm text-gray-700">{article.excerpt}</p>
                 </CardContent>
-                <CardFooter>
-                  <Button onClick={() => navigateToStory(article.id)}>Read More</Button>
+                <CardFooter className="p-4">
+                  <Button onClick={() => navigateToStory(article.id)} className="bg-indigo-500 text-white hover:bg-indigo-600 transition-colors duration-300">Read More</Button>
                 </CardFooter>
               </Card>
             ))}
