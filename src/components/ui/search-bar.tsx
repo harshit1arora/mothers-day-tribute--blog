@@ -1,8 +1,9 @@
 'use client';
 
 import {useState, useEffect} from 'react';
-import {Input} from './input';
-import {Button} from './button';
+
+import {Button} from '@/components/ui/button';
+import {Input} from '@/components/ui/input';
 import {Search} from 'lucide-react';
 
 interface Article {
@@ -27,7 +28,7 @@ const SearchBar: React.FC<SearchBarProps> = ({articles, onSearch}) => {
 
   useEffect(() => {
     // Filter articles based on search term
-    const results = articles.filter((article) => {
+    const results = articles.filter(article => {
       const titleMatch = article.title.toLowerCase().includes(searchTerm.toLowerCase());
       const excerptMatch = article.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
       return titleMatch || excerptMatch;

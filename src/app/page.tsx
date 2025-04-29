@@ -1,24 +1,21 @@
 'use client';
 
 import {useEffect, useState} from 'react';
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
+
 import {Button} from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+  CardFooter,
+} from '@/components/ui/card';
 import {cn} from '@/lib/utils';
 import {useRouter, useSearchParams} from 'next/navigation';
 import {ChevronLeft, ChevronRight} from 'lucide-react';
 import HomeLayout from '@/app/components/home-layout';
-
-interface Article {
-  id: string;
-  title: string;
-  excerpt: string;
-  fullContent: string;
-  authorName: string;
-  submissionDate: string;
-  category: string;
-  readingTime: number;
-  imageUrl: string;
-}
+import {Article} from '@/types/article';
 
 const categories = ['All', 'Stories', 'Health', 'Inspiration'];
 
@@ -57,11 +54,11 @@ export default function Home() {
   // Hero Section Carousel Logic
   const featuredArticles = articles.slice(0, 3); // Take the first 3 articles as featured
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % featuredArticles.length);
+    setCurrentSlide(prev => (prev + 1) % featuredArticles.length);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + featuredArticles.length) % featuredArticles.length);
+    setCurrentSlide(prev => (prev - 1 + featuredArticles.length) % featuredArticles.length);
   };
 
   // Category Filtering Logic
@@ -69,7 +66,7 @@ export default function Home() {
     if (category === 'All') {
       setFilteredArticles(articles);
     } else {
-      const filtered = articles.filter((article) => article.category === category);
+      const filtered = articles.filter(article => article.category === category);
       setFilteredArticles(filtered);
     }
   };
@@ -144,17 +141,17 @@ export default function Home() {
         <section className="mb-16">
           <h2 className="text-2xl font-semibold mb-4 text-gray-800">Explore by Category</h2>
           <div className="flex flex-wrap gap-4">
-            {categories.map((category) => (
+            {categories.map(category => (
               <Button
                 key={category}
                 variant="outline"
                 onClick={() => handleCategoryClick(category)}
                 className={cn(
-                  "bg-white hover:bg-indigo-50 text-gray-700 border-indigo-300",
+                  'bg-white hover:bg-indigo-50 text-gray-700 border-indigo-300',
                   filteredArticles.length > 0 &&
                     (category === 'All' ? true : filteredArticles.some(article => article.category === category))
-                    ? "bg-indigo-100 border-indigo-500"
-                    : ""
+                    ? 'bg-indigo-100 border-indigo-500'
+                    : ''
                 )}
               >
                 {category}
@@ -167,8 +164,11 @@ export default function Home() {
         <section>
           <h2 className="text-2xl font-semibold mb-4 text-gray-800">Recent Articles</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {searchResults.map((article) => (
-              <Card key={article.id} className="bg-secondary shadow-md rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-105">
+            {searchResults.map(article => (
+              <Card
+                key={article.id}
+                className=" shadow-md rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-105"
+              >
                 <img
                   src={article.imageUrl}
                   alt={article.title}
@@ -176,12 +176,21 @@ export default function Home() {
                 />
                 <CardHeader className="p-4">
                   <CardTitle className="text-xl font-semibold text-gray-900">{article.title}</CardTitle>
-                  <CardDescription className="text-indigo-600 font-semibold">{article.category} - {article.readingTime} min read</CardDescription>
+                  <CardDescription className="text-indigo-600 font-semibold">
+                    {article.category} - {article.readingTime} min read
+                  </CardDescription>
                 </CardHeader>
                 <CardContent className="p-4">
                   <p className="text-sm text-gray-700">{article.excerpt}</p>
                 </CardContent>
-                <Button onClick={() => navigateToStory(article.id)} className="bg-indigo-500 text-white hover:bg-indigo-600 transition-colors duration-300">Read More</Button>
+                <CardFooter className="p-4">
+                  <Button
+                    onClick={() => navigateToStory(article.id)}
+                    className="bg-indigo-500 text-white hover:bg-indigo-600 transition-colors duration-300"
+                  >
+                    Read More
+                  </Button>
+                </CardFooter>
               </Card>
             ))}
           </div>

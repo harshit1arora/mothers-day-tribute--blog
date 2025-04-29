@@ -18,7 +18,7 @@ export default function ContactPage() {
   const router = useRouter();
   return (
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-purple-200 to-pink-100">
-      <Card className="w-full max-w-2xl shadow-xl rounded-2xl overflow-hidden">
+      <Card className="w-full max-w-4xl shadow-xl rounded-2xl overflow-hidden">
         <CardHeader className="p-6">
           <CardTitle className="text-3xl font-bold text-gray-900 mb-2">
             Contact Us

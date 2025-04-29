@@ -1,22 +1,11 @@
 'use client';
 
-import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
-import {Button} from '@/components/ui/button';
 import {useRouter} from 'next/navigation';
 import {useEffect, useState} from 'react';
-import React from 'react';
 
-interface Article {
-  id: string;
-  title: string;
-  excerpt: string;
-  fullContent: string;
-  authorName: string;
-  submissionDate: string;
-  category: string;
-  readingTime: number;
-  imageUrl: string;
-}
+import {Button} from '@/components/ui/button';
+import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
+import {Article} from '@/types/article';
 
 interface Props {
   params: {
@@ -37,7 +26,7 @@ export default function StoryDetailPage({params}: Props) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const articles: Article[] = await response.json();
-        const foundArticle = articles.find((article) => article.id === id);
+        const foundArticle = articles.find(article => article.id === id);
         setArticle(foundArticle);
       } catch (error) {
         console.error('Could not load articles:', error);
@@ -56,7 +45,10 @@ export default function StoryDetailPage({params}: Props) {
           </CardHeader>
           <CardContent>
             <p className="text-gray-600 mb-4">The article you are looking for does not exist.</p>
-            <Button onClick={() => router.push('/')} className="bg-indigo-500 text-white hover:bg-indigo-600 transition-colors duration-300">
+            <Button
+              onClick={() => router.push('/')}
+              className="bg-indigo-500 text-white hover:bg-indigo-600 transition-colors duration-300"
+            >
               Go to Home
             </Button>
           </CardContent>
@@ -86,7 +78,10 @@ export default function StoryDetailPage({params}: Props) {
           <p className="text-gray-800 leading-relaxed">{article.fullContent}</p>
         </CardContent>
         <div className="p-6 bg-gray-50 border-t border-gray-200">
-          <Button onClick={() => router.back()} className="bg-indigo-500 text-white hover:bg-indigo-600 transition-colors duration-300">
+          <Button
+            onClick={() => router.back()}
+            className="bg-indigo-500 text-white hover:bg-indigo-600 transition-colors duration-300"
+          >
             Go Back
           </Button>
         </div>

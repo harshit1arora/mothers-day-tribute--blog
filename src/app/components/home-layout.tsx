@@ -2,20 +2,8 @@
 
 import AuthorProfile from '@/app/components/ui/author-profile';
 import SearchBar from '@/components/ui/search-bar';
-import WhereToNext from '@/app/components/ui/where-to-next';
-import {useState} from 'react';
-
-interface Article {
-  id: string;
-  title: string;
-  excerpt: string;
-  fullContent: string;
-  authorName: string;
-  submissionDate: string;
-  category: string;
-  readingTime: number;
-  imageUrl: string;
-}
+import WhereToNext from '@/components/ui/where-to-next';
+import {Article} from '@/types/article';
 
 interface HomeLayoutProps {
   articles: Article[];
