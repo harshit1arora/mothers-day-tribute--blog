@@ -4,7 +4,7 @@ import {useEffect, useState} from 'react';
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
 import {cn} from '@/lib/utils';
-import {useRouter} from 'next/navigation';
+import {useRouter, useSearchParams} from 'next/navigation';
 import {ChevronLeft, ChevronRight} from 'lucide-react';
 import HomeLayout from '@/app/components/home-layout';
 
@@ -28,6 +28,7 @@ export default function Home() {
   const [searchResults, setSearchResults] = useState<Article[]>([]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const router = useRouter();
+  const searchParams = useSearchParams();
 
   useEffect(() => {
     // Load articles from local JSON file
@@ -71,6 +72,7 @@ export default function Home() {
 
   const handleCategoryClick = (category: string) => {
     filterArticlesByCategory(category);
+    router.push(`/?category=${category}`);
   };
 
   // Update searchResults when filteredArticles change
@@ -82,6 +84,16 @@ export default function Home() {
   const navigateToStory = (id: string) => {
     router.push(`/articles/${id}`);
   };
+
+  // Apply initial category filter from URL params
+  useEffect(() => {
+    const categoryParam = searchParams.get('category');
+    if (categoryParam && categories.includes(categoryParam)) {
+      filterArticlesByCategory(categoryParam);
+    } else {
+      filterArticlesByCategory('All');
+    }
+  }, [searchParams, articles]);
 
   return (
     <HomeLayout articles={articles}>

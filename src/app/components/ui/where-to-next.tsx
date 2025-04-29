@@ -10,11 +10,11 @@ const WhereToNext = () => {
       <ul className="list-none pl-0">
         <li className="mb-1">
           <a
-            href="/"
+            href="#"
             className="text-sm hover:underline"
             onClick={e => {
               e.preventDefault();
-              router.push('/');
+              router.push('/?category=Stories');
             }}
           >
             Stories
@@ -22,11 +22,11 @@ const WhereToNext = () => {
         </li>
         <li className="mb-1">
           <a
-            href="/"
+            href="#"
             className="text-sm hover:underline"
             onClick={e => {
               e.preventDefault();
-              router.push('/');
+              router.push('/?category=Health');
             }}
           >
             Health
@@ -34,17 +34,17 @@ const WhereToNext = () => {
         </li>
         <li>
           <a
-            href="/"
+            href="#"
             className="text-sm hover:underline"
             onClick={e => {
               e.preventDefault();
-              router.push('/');
+              router.push('/?category=Inspiration');
             }}
           >
             Inspiration
           </a>
         </li>
-                <li>
+        <li>
           <a
             href="/contact"
             className="text-sm hover:underline"
@@ -62,4 +62,3 @@ const WhereToNext = () => {
 };
 
 export default WhereToNext;
-
