@@ -1,19 +1,9 @@
 'use client';
 
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarFooter,
-  SidebarGroup,
-  SidebarHeader,
-  SidebarInset,
-  SidebarTrigger,
-  SidebarProvider,
-} from '@/components/ui/sidebar';
 import AuthorProfile from '@/app/components/ui/author-profile';
 import SearchBar from '@/components/ui/search-bar';
-import WhereToNext from '@/app/components/ui/where-to-next'; // Corrected import
-import {Button} from '@/components/ui/button';
+import WhereToNext from '@/app/components/ui/where-to-next';
+import {useState} from 'react';
 
 interface Article {
   id: string;
@@ -30,39 +20,20 @@ interface Article {
 interface HomeLayoutProps {
   articles: Article[];
   children: React.ReactNode;
+  onSearch: (results: Article[]) => void;
 }
 
-const HomeLayout: React.FC<HomeLayoutProps> = ({articles, children}) => {
-
+const HomeLayout: React.FC<HomeLayoutProps> = ({articles, children, onSearch}) => {
   return (
-    <SidebarProvider>
-      <SidebarInset>
-        <div className="md:hidden">
-          <SidebarTrigger />
-        </div>
-        <div className="md:block">
-          {children}
-        </div>
-      </SidebarInset>
-      <Sidebar>
-        <SidebarHeader>
-          <SearchBar articles={articles} onSearch={() => {}}/>
-        </SidebarHeader>
-        <SidebarContent>
-          <SidebarGroup>
-            <AuthorProfile authorName="Harshit Arora" title="Passionate about sharing tribute stories." imageUrl="https://picsum.photos/50/50"/>
-          </SidebarGroup>
-          <SidebarGroup>
-            <WhereToNext />
-          </SidebarGroup>
-        </SidebarContent>
-        <SidebarFooter>
-          <Button variant="outline">Settings</Button>
-        </SidebarFooter>
-      </Sidebar>
-    </SidebarProvider>
+    <div className="flex flex-col md:flex-row">
+      <div className="md:w-1/4 p-4">
+        <SearchBar articles={articles} onSearch={onSearch}/>
+        <AuthorProfile authorName="Harshit Arora" title="Passionate about sharing tribute stories." imageUrl="https://picsum.photos/50/50"/>
+        <WhereToNext />
+      </div>
+      <div className="md:w-3/4 p-4">{children}</div>
+    </div>
   );
 };
 
 export default HomeLayout;
-

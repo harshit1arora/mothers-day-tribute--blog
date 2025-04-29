@@ -1,4 +1,3 @@
-
 'use client';
 
 import {useState, useEffect} from 'react';
@@ -42,16 +41,18 @@ const SearchBar: React.FC<SearchBarProps> = ({articles, onSearch}) => {
   };
 
   return (
-    <div className="flex items-center space-x-2">
-      <Input
-        type="text"
-        placeholder="Search articles..."
-        value={searchTerm}
-        onChange={handleInputChange}
-      />
-      <Button variant="outline" size="icon" aria-label="Search">
-        <Search className="h-4 w-4"/>
-      </Button>
+    <div>
+      <div className="flex items-center space-x-2 mb-4">
+        <Input
+          type="text"
+          placeholder="Search articles..."
+          value={searchTerm}
+          onChange={handleInputChange}
+        />
+        <Button variant="outline" size="icon" aria-label="Search">
+          <Search className="h-4 w-4"/>
+        </Button>
+      </div>
     </div>
   );
 };

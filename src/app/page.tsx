@@ -1,7 +1,7 @@
 'use client';
 
 import {useEffect, useState} from 'react';
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from '@/components/ui/card';
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
 import {cn} from '@/lib/utils';
 import {useRouter, useSearchParams} from 'next/navigation';
@@ -95,8 +95,12 @@ export default function Home() {
     }
   }, [searchParams, articles]);
 
+  const handleSearch = (results: Article[]) => {
+    setSearchResults(results);
+  };
+
   return (
-    <HomeLayout articles={articles}>
+    <HomeLayout articles={articles} onSearch={handleSearch}>
       <div className="container mx-auto py-10 bg-gradient-to-br from-purple-50 to-pink-50 min-h-screen">
         {/* Hero Section */}
         <section className="mb-16">
