@@ -1,4 +1,3 @@
-
 import {
   Sidebar,
   SidebarContent,
@@ -49,9 +48,11 @@ const HomeLayout: React.FC<HomeLayoutProps> = ({articles, children}) => {
     <SidebarProvider>
       <SidebarInset>
         <div className="md:hidden">
-          <SidebarTrigger/>
+          <SidebarTrigger />
         </div>
-        {children}
+        <div className="md:block">
+          {children}
+        </div>
       </SidebarInset>
       <Sidebar>
         <SidebarHeader>
