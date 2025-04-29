@@ -1,8 +1,9 @@
+'use client';
 
 import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
 import {useRouter} from 'next/navigation';
-import articles from '../../../articles.json';
+import {useEffect, useState} from 'react';
 
 interface Article {
   id: string;
@@ -25,9 +26,25 @@ interface Props {
 export default function StoryDetailPage({params}: Props) {
   const {id} = params;
   const router = useRouter();
+  const [article, setArticle] = useState<Article | undefined>(undefined);
 
-  // Find the article with the matching ID
-  const article: Article | undefined = articles.find((article) => article.id === id);
+  useEffect(() => {
+    const loadArticle = async () => {
+      try {
+        const response = await fetch('/articles.json');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const articles: Article[] = await response.json();
+        const foundArticle = articles.find((article) => article.id === id);
+        setArticle(foundArticle);
+      } catch (error) {
+        console.error('Could not load articles:', error);
+      }
+    };
+
+    loadArticle();
+  }, [id]);
 
   if (!article) {
     return (
