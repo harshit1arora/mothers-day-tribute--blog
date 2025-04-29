@@ -15,7 +15,7 @@ import {
   SidebarTrigger,
 } from '@/components/ui/sidebar';
 import AuthorProfile from '@/components/ui/author-profile';
-import {WhereToNext} from '@/components/ui/where-to-next';
+import WhereToNext from '@/components/ui/where-to-next';
 import SearchBar from '@/components/ui/search-bar';
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
@@ -71,4 +71,3 @@ const HomeLayout: React.FC<HomeLayoutProps> = ({articles, children}) => {
 };
 
 export default HomeLayout;
-
