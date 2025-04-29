@@ -6,20 +6,13 @@ import {
   SidebarFooter,
   SidebarGroup,
   SidebarHeader,
-  SidebarInput,
   SidebarInset,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarProvider,
-  SidebarRail,
-  SidebarSeparator,
   SidebarTrigger,
+  SidebarProvider,
 } from '@/components/ui/sidebar';
 import AuthorProfile from '@/components/ui/author-profile';
-import WhereToNext from '@/components/ui/where-to-next';
 import SearchBar from '@/components/ui/search-bar';
-import {useState} from 'react';
+import WhereToNext from '@/components/ui/where-to-next'; // Corrected import
 import {Button} from '@/components/ui/button';
 
 interface Article {
@@ -59,7 +52,6 @@ const HomeLayout: React.FC<HomeLayoutProps> = ({articles, children}) => {
           <SidebarGroup>
             <AuthorProfile authorName="Harshit Arora" title="Passionate about sharing tribute stories." imageUrl="https://picsum.photos/50/50"/>
           </SidebarGroup>
-          <SidebarSeparator/>
           <SidebarGroup>
             <WhereToNext />
           </SidebarGroup>
