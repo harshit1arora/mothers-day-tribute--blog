@@ -5,9 +5,9 @@ import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
-  CardFooter,
 } from '@/components/ui/card';
 import {Input} from '@/components/ui/input';
 import {Label} from '@/components/ui/label';
@@ -46,16 +46,9 @@ export default function ContactPage() {
             </div>
           </form>
         </CardContent>
-        <CardFooter className="p-6 flex justify-between items-center">
+        <CardFooter className="p-6">
           <Button className="bg-indigo-500 text-white hover:bg-indigo-600 transition-colors duration-300">
             Send Message
-          </Button>
-          <Button
-            onClick={() => router.back()}
-            variant="ghost"
-            className="text-gray-600 hover:text-gray-800 transition-colors duration-300"
-          >
-            Go Back
           </Button>
         </CardFooter>
       </Card>

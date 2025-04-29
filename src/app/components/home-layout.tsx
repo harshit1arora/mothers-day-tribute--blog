@@ -1,4 +1,4 @@
-'use client';
+
 
 import AuthorProfile from '@/app/components/ui/author-profile';
 import SearchBar from '@/components/ui/search-bar';
