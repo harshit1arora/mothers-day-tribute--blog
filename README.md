@@ -58,3 +58,14 @@ This Next.js project is a blog dedicated to Mother's Day tributes. It features:
 *   Tailwind CSS
 *   Shadcn UI
 *   Genkit
+
+*   ![image](https://github.com/user-attachments/assets/27a7bca8-5db2-4398-a09f-28820dbf73a3)
+*   ![image](https://github.com/user-attachments/assets/763206c9-f2c1-49bf-8aa8-a72b9912aa2a)
+*   ![image](https://github.com/user-attachments/assets/90c5f4c8-6c1c-4587-8a25-4047d567cf6a)
+*   ![image](https://github.com/user-attachments/assets/f606e943-fa77-4c85-9dde-e03faf57f6f2)
+*   ![image](https://github.com/user-attachments/assets/176da385-d332-46dc-991e-73a46c9ebccb)
+
+
+
+
+
